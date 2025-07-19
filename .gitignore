@@ -1,0 +1,59 @@
+# Zig build artifacts
+zig-out/
+zig-cache/
+.zig-cache/
+
+# Dependencies
+deps/
+lib/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+*.test
+test-results/
+
+# Demo binaries
+testnet_demo
+crypto_demo
+ledger_demo
+consensus_demo
+network_demo
+integration_demo
+
+# Logs
+*.log
+logs/
+
+# Database files
+*.db
+*.rocksdb/
+data/
+
+# Config files with secrets
+config.local.toml
+*.key
+*.pem
+
+# Profiling
+*.prof
+perf.data
+perf.data.old
+
+# Documentation build
+docs/_build/
+docs/html/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
