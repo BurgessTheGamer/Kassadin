@@ -312,28 +312,28 @@ Weeks 21-24: Optimization & Release
 #### Phase 3: Consensus (Weeks 9-12)
 
 **Week 9: Ouroboros Praos Basics**
-- [ ] Slot/epoch arithmetic
-- [ ] VRF eligibility checks
-- [ ] Stake distribution queries
-- [ ] Leadership schedule
+- [x] Slot/epoch arithmetic
+- [x] VRF eligibility checks (simplified)
+- [x] Stake distribution queries (basic)
+- [x] Leadership schedule (simplified)
 
 **Week 10: Block Production**
-- [ ] Block header construction
-- [ ] Block body assembly
-- [ ] Operational certificate
-- [ ] Block signing
+- [x] Block header construction
+- [x] Block body assembly
+- [ ] Operational certificate (full implementation)
+- [x] Block signing (structure ready)
 
 **Week 11: Chain Selection**
-- [ ] Chain comparison rules
-- [ ] Fork handling
-- [ ] Rollback limits
-- [ ] Chain quality checks
+- [x] Chain comparison rules
+- [x] Fork handling
+- [x] Rollback limits
+- [x] Chain quality checks
 
 **Week 12: Stake Pool Operations**
-- [ ] Pool registration
-- [ ] Delegation tracking
-- [ ] Reward distribution
-- [ ] Pool ranking
+- [x] Pool registration (data structures)
+- [x] Delegation tracking (basic)
+- [ ] Reward distribution (full calculation)
+- [ ] Pool ranking (full implementation)
 
 #### Phase 4: Networking (Weeks 13-16)
 
@@ -346,14 +346,14 @@ Weeks 21-24: Optimization & Release
 **Week 14: Cardano Protocols**
 - [x] Handshake protocol ✅ (v14 working!)
 - [x] Mux layer protocol ✅ (8-byte headers)
-- [ ] Chain-sync protocol (next task)
+- [x] Chain-sync protocol ✅ (downloading blocks!)
 - [ ] Block-fetch protocol
 - [ ] TX submission
 
 **Week 15: Peer Management**
-- [ ] Peer discovery
+- [x] Peer discovery (DNS resolution)
 - [ ] Reputation system
-- [ ] Connection limits
+- [x] Connection limits (basic)
 - [ ] Geographic distribution
 
 **Week 16: Security**
@@ -365,10 +365,10 @@ Weeks 21-24: Optimization & Release
 #### Phase 5: Integration (Weeks 17-20)
 
 **Week 17: Component Integration**
-- [ ] Main event loop
-- [ ] Inter-component messaging
-- [ ] State synchronization
-- [ ] Error propagation
+- [x] Main event loop
+- [x] Inter-component messaging
+- [x] State synchronization
+- [x] Error propagation
 
 **Week 18: Configuration & CLI**
 - [ ] Config file format
@@ -383,8 +383,8 @@ Weeks 21-24: Optimization & Release
 - [ ] Regression suite
 
 **Week 20: Testnet Validation**
-- [ ] Connect to preview testnet
-- [ ] Sync from genesis
+- [x] Connect to preview testnet ✅
+- [x] Sync from genesis (Byron blocks) ✅
 - [ ] Maintain sync for 72 hours
 - [ ] Submit transactions
 
@@ -1056,6 +1056,36 @@ Given our accelerated progress:
 3. **Focused Scope**: Building core functionality first, deferring advanced features
 4. **No Blockers**: Each module has clear boundaries, allowing rapid progress
 5. **Test-Driven**: Catching issues early prevents debugging time later
+
+### Remaining Work Summary
+
+#### Critical Path Items
+1. **Block Processing**
+   - [x] Byron era block decoding
+   - [ ] Shelley+ era block decoding
+   - [ ] Block header validation
+   - [ ] Update chain state with blocks
+
+2. **Storage Layer**
+   - [ ] Block storage to disk
+   - [ ] UTXO database implementation
+   - [ ] State snapshots for fast sync
+
+3. **Missing Crypto**
+   - [ ] Full VRF implementation
+   - [ ] KES signatures
+   - [ ] BLS12-381 operations
+
+4. **Protocol Completion**
+   - [ ] Block-fetch protocol
+   - [ ] Transaction submission
+   - [ ] Local transaction mempool
+
+5. **Production Features**
+   - [ ] Configuration management
+   - [ ] Monitoring/metrics
+   - [ ] Performance optimization
+   - [ ] Security hardening
 
 ---
 
